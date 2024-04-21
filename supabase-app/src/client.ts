@@ -1,10 +1,6 @@
 import { Connection, Client } from '@temporalio/client';
 import { example } from './workflows';
 import { nanoid } from 'nanoid';
-import { createClient } from '@supabase/supabase-js'
-
-// Create a single supabase client for interacting with your database
-const supabase = createClient('http://localhost:54321', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0')
 async function run() {
   // Connect to the default Server location
   const connection = await Connection.connect({ address: 'localhost:7233' });
